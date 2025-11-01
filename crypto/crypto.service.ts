@@ -22,7 +22,6 @@ export class CryptoService implements OnModuleInit, OnModuleDestroy {
   private workerPool: WorkerState[] = [];
   private taskQueue: WorkerTask[] = [];
   private requestQueue: Promise<any> = Promise.resolve();
-  private readonly maxConcurrentRequests = 2;
 
   async onModuleInit() {
     this.initializeWorkerPool();
